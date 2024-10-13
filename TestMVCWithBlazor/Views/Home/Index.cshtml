@@ -1,0 +1,15 @@
+﻿@using TestMVCWithBlazor.Components
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<component type="typeof(EmbeddedCounter)" render-mode="ServerPrerendered" />
+
+<br ><br />
+<br ><br />
+Click on the home or privacy button and notice in your devtools network tab, that the page get loaded twice
+and in both cases, Blazor.js as initiator.
